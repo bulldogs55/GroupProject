@@ -33,3 +33,10 @@ numWeeksPerYearOp = input('What is the number of weeks per year that the zoo wil
 
 %number of years of operation
 yearOp = input('What is the number of years that the zoo will operate for?');
+
+%Price of Admission
+PriceAdmission=input('What is the price of admission per person?')
+%Number of Peope that visit per week
+Visitor=input('What is the number of people that visit per week?')
+%Expected Donations per week
+Donations=input('What is the expected amount of donations per week?')
