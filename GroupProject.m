@@ -4,4 +4,6 @@ materials = {'Concrete','Wood','Adobe'};
 Menu = menu('Select Material', materials);
 array1 = {'Concrete', 16, 30,96000,900,5,5;'Wood',23,53,115000,800,12,11;'Adobe',18,42,68000,600,6,5};
 
-chosenArray = array1{Menu,:}
+chosenArray = array1(Menu,:)
+
+someNum = chosenArray{3}
