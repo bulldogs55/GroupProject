@@ -29,14 +29,30 @@ maintenanceCost = input('What is the maintenance cost per week(USD)? ');
 landFillCost = input('What is the landfill cost per week(USD)? ');
 
 %number of weeks per year for zoo operation
-numWeeksPerYearOp = input('What is the number of weeks per year that the zoo will operate?');
+numWeeksPerYearOp = input('What is the number of weeks per year that the zoo will operate? ');
 
 %number of years of operation
-yearOp = input('What is the number of years that the zoo will operate for?');
+yearOp = input('What is the number of years that the zoo will operate for? ');
 
 %Price of Admission
-PriceAdmission=input('What is the price of admission per person?')
-%Number of Peope that visit per week
-Visitor=input('What is the number of people that visit per week?')
+priceAdmission=input('What is the price of admission per person? ');
+%Number of People that visit per week
+visitor=input('What is the number of people that visit per week? ');
 %Expected Donations per week
-Donations=input('What is the expected amount of donations per week?')
+donations=input('What is the expected amount of donations per week? ');
+
+weeklyIncome = priceAdmission*visitor+donations;
+
+capital = fixedCost;
+
+costPerWeek = energyCost + laborCost + maintenanceCost + landFillCost;
+
+monthsBreakeven = (capital/(weeklyIncome - costPerWeek))/4;
+
+revenuePerYear = weeklyIncome * numWeeksPerYearOp;
+
+costPerYear = costPerWeek * numWeeksPerYearOp;
+
+totalProfit = (revenuePerYear - costPerYear) * yearOp  - capital;
+
+fprintf("Material: %s\n\tOperating %0.0f weeks per year will generate per year:\n\t\tRevenue:\t$%0.0f\n\t\tCost:\t$%0.0f\n\tThe breakeven time is %0.2f months\n\tThe total profit after %0.0f years is $%e.\n", materials{Menu}, numWeeksPerYearOp, revenuePerYear, costPerYear, monthsBreakeven, yearOp, totalProfit);
