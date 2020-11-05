@@ -55,4 +55,7 @@ costPerYear = costPerWeek * numWeeksPerYearOp;
 
 totalProfit = (revenuePerYear - costPerYear) * yearOp  - capital;
 
+
+
 fprintf("Material: %s\n\tOperating %0.0f weeks per year will generate per year:\n\t\tRevenue:\t$%0.0f\n\t\tCost:\t$%0.0f\n\tThe breakeven time is %0.2f months\n\tThe total profit after %0.0f years is $%e.\n", materials{Menu}, numWeeksPerYearOp, revenuePerYear, costPerYear, monthsBreakeven, yearOp, totalProfit);
+
