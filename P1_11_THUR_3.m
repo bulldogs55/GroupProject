@@ -71,7 +71,7 @@ costPerYear = costPerWeek * numWeeksPerYearOp;
 
 totalProfit = (revenuePerYear - costPerYear) * yearOp  - capital;
 
-%Calulate the Needed Donation for a Breakeven Point for 7 months
+%Calculate the Needed Donation for a Breakeven Point for 7 months
 donation = capital + (costPerWeek - weeklyIncome) * 28;
 
 breakEvenYear = (capital/(weeklyIncome - costPerWeek))/numWeeksPerYearOp;
